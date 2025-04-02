@@ -1,0 +1,30 @@
+﻿@model MCPAProject.Models.studName
+@{
+    ViewBag.Title = "About";
+}
+
+@using (Html.BeginForm("RedirectPage", "Home", FormMethod.Post))
+{
+
+
+    <main aria-labelledby="title">
+        <h2 id="title">@ViewBag.Title.</h2>
+        <h3>@ViewBag.Message</h3>
+
+        <p>WelCome To Team Titans About Page</p>
+
+
+        <div>
+            Select Sudent to view more details @Html.DropDownListFor(n => n.PojNames,
+new SelectList(
+Enum.GetValues(typeof(MCPAProject.Models.Names))))
+        </div>
+        <div>
+
+            <h3> View Student Work</h3>
+            <button type="submit"> View </button>
+
+
+
+    </main>
+}
