@@ -174,6 +174,13 @@
     <Content Include="Student Profile\Siyabonga Mkhize\More pages\Modules.html" />
     <Content Include="Student Profile\Siyabonga Mkhize\README.txt" />
     <Content Include="Student Profile\Siyabonga Mkhize\style.css" />
+    <Content Include="Student Profile\Template\Home.html" />
+    <Content Include="Student Profile\Template\Images\DUT_log.jpg" />
+    <Content Include="Student Profile\Template\More pages\Contact.html" />
+    <Content Include="Student Profile\Template\More pages\Details.html" />
+    <Content Include="Student Profile\Template\More pages\Modules.html" />
+    <Content Include="Student Profile\Template\README.txt" />
+    <Content Include="Student Profile\Template\style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -258,6 +265,7 @@
     <Content Include="Student Profile\Siyabonga Mkhize\.git\refs\remotes\origin\main" />
     <Content Include="Student Profile\Siyabonga Mkhize\docs\CNAME" />
     <Content Include="Views\Home\Student_info.cshtml" />
+    <Content Include="Student Profile\Template\docs\CNAME" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
