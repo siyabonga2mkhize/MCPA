@@ -37,6 +37,7 @@ function showMessage() {
     alert("This button works!");
 }
 
+//
 window.onload = function () {
     const cartListContainer = document.querySelector('#cartItems'); 
     const cartItems = JSON.parse(localStorage.getItem('carts')) || [];
