@@ -13,6 +13,28 @@ body{
     padding-top: 10px;
     transition: transform .5s;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .icon-home {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon-home a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .icon-home svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
 
 svg{
     width:30px;
