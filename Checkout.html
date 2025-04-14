@@ -16,13 +16,40 @@
             <div class="container">
                 <h1>Checkout</h1>
                 <hr>
-                <section id="cart-items">
-                    <h2>Cart Items</h2>
+              <script>
+    
+               function displayCart() {
+               let cart = JSON.parse(localStorage.getItem("cart")) || [];
+               const cartItemsContainer = document.getElementById("cart-items");
+               let totalAmount = 0;
+               cart.forEach(item => {
+               const itemElement = document.createElement("div");
+               itemElement.className = "cart-item";
+               itemElement.innerHTML = `
+                <p>Product Name: ${item.productName}</p>
+                <p>Price: $${item.price}</p>
+                <p>Quantity: ${item.quantity}</p> 
+                `;
+              cartItemsContainer.appendChild(itemElement);
+              totalAmount += item.price * item.quantity;
+             });
+             document.getElementById("total-amount").innerText = `Total: $${totalAmount}`;
+             }
+             window.onload = displayCart;
+                
+          </script>
+
+                    <!-- Cart Items Section -->
+                    <section id="cart-items">
+                    <h2>Cart Items</h2>
+                    </section>
+                   <p id="total-amount"></p>
+               
                     <!-- Example cart item -->
                     <div class="cart-item">
                         <p>Product Name</p>
-                        <p>Quantity: 1</p>
-                        <p>Price: $10.00</p>
+                        <p>Quantity:0 </p>
+                        <p>Price: 0</p>
                     </div>
                 </section>
                 <section id="billing-details">
