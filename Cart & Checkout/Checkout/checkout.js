@@ -3,7 +3,12 @@ function downloadReceipt() {
     const cartItems = JSON.parse(localStorage.getItem('carts')) || [];
     const products = JSON.parse(localStorage.getItem('products')) || [];
     const receiptNumber = document.getElementById('receiptNumber').textContent;
-    
+
+    // Get the selected address
+    const addressSelect = document.getElementById("addressSelect");
+    const selectedAddress = addressSelect.value;
+    const addressParts = selectedAddress.split(", "); // Split into Shop Name, Area, and Google Maps Link
+
     let content = "Receipt from Woolworths\n\n";
     content += `Receipt Number: ${receiptNumber}\n`;
     content += `Order Date: ${new Date().toLocaleDateString()}\n\n`;
@@ -24,8 +29,15 @@ function downloadReceipt() {
 
     content += `\nSubtotal: R${subtotal.toFixed(2)}\n`;
     content += `VAT (15.5%): R${vat.toFixed(2)}\n`;
-    content += `Total: R${total.toFixed(2)}\n`;
-    content += "Thank you for shopping with us!";
+    content += `Total: R${total.toFixed(2)}\n\n`;
+
+    // Add the selected address to the receipt
+    content += "Collection Address:\n";
+    content += `Shop Name: ${addressParts[0]}\n`;
+    content += `Area: ${addressParts[1]}\n`;
+    content += `Google Maps Link: ${addressParts[2]}\n`;
+
+    content += "\nThank you for shopping with us!!! 😊";
     let blob = new Blob([content], { type: "text/plain" });
     let a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
@@ -109,3 +121,21 @@ calculateSummary();
         // Navigate to the Collection Policy page
         window.location.href = window.location.origin + window.location.pathname.replace(/\/Checkout.*/, '') + 'Checkout/collection.html';
     }
+
+
+    //Address
+    function updateAddress() {
+        const addressSelect = document.getElementById("addressSelect");
+        const selectedAddress = document.getElementById("selectedAddress");
+    
+        // Get the selected address value
+        const address = addressSelect.value;
+    
+        // Split the address into parts (Shop Name, Area, Google Maps Link)
+        const addressParts = address.split(", ");
+        selectedAddress.innerHTML = `
+            <p>${addressParts[0]}</p>
+            <p>${addressParts[1]}</p>
+            <p><a href="${addressParts[2]}" target="_blank">View on Google Maps</a></p>
+        `;
+    }    

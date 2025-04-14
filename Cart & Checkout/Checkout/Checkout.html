@@ -36,14 +36,30 @@
     </div>
 
     
-<div class="AddressContainer">
-    <h1>Address</h1>
-    <p>Shop Number</p>
-    <p>Mall</p>
-    <p>Street Name</p>
-    <p>Code</p>
+    <div class="AddressContainer">
+        <h1>Address</h1>
+        <label for="addressSelect">Select Collection Address:</label>
+        <select id="addressSelect" name="addressSelect" onchange="updateAddress()">
+            <option value="" disabled selected>Select an address</option>
+            <option value="Woolworths West Street, Durban Central, https://g.co/kgs/bgYA62g">Woolworths West Street, Durban Central</option>
+            <option value="Woolworths Bulwer Road, Bulwer, https://g.co/kgs/qUuP2NS">Woolworths Bulwer Road, Bulwer</option>
+            <option value="Woolworths Musgrave, Musgrave Rd, https://g.co/kgs/xndkiE1">Woolworths Musgrave, Musgrave Rd</option>
+            <option value="Woolworths Cowey Road, Musgrave Rd, https://g.co/kgs/AAYrZfN">Woolworths Cowey Road, Musgrave Rd</option>
+            <option value="Woolworths Food Windermere, Windermere, https://g.co/kgs/czoMYK9">Woolworths Food Windermere, Windermere</option>
+            <option value="Woolworths Amanzimtoti Toti Towers, Amanzimtoti, https://g.co/kgs/3wdYW7i">Woolworths Amanzimtoti Toti Towers, Amanzimtoti</option>
+            <option value="Woolworths Foodstop, Berea, https://g.co/kgs/1hgfMcq">Woolworths Foodstop, Berea</option>
+            <option value="Woolworths Mackeurtan Avenue, Durban North, https://g.co/kgs/svrSQcz">Woolworths Mackeurtan Avenue, Durban North</option>
+            <option value="Woolworths Malvern Park, Malvern, https://g.co/kgs/GzqdHvQ">Woolworths Malvern Park, Malvern</option>
+            <option value="Woolworths Westville Pavillion, Dr Dawncliffe, https://g.co/kgs/hrww27K">Woolworths Westville Pavillion, Dr, Dawncliffe</option>
+            <option value="Woolworths Umlazi, Umlazi V, https://g.co/kgs/HR5CEtS">Woolworths Umlazi, Umlazi V</option>
+            <option value="Woolworths Westwood, Westville, https://g.co/kgs/PPbaSBw">Woolworths Westwood, Westville</option>
+        </select>
+        <div id="selectedAddress">
+            <p>Shop Name</p>
+            <p>Area</p>
+            <p>Google Maps Link</p>
+        </div>
     </div>
-    
     <div >
         <button class="buttonDownload" type="button" onclick="downloadReceipt()">
             Download Receipt
