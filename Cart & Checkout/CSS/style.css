@@ -98,7 +98,7 @@ header .icon-cart span{
     border:none;
     cursor: pointer;
 }
-
+/**cart */
 .cartTab{
     width: 400px;
     background-color: black;
@@ -291,6 +291,18 @@ body.showCart .container{
 .AddressContainer p{
     font-size: 1.2em;
     margin-bottom: 5px;
+}
+
+#addressSelect {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+#selectedAddress p {
+    margin: 5px 0;
+    font-size: 1rem;
 }
 
 /* Items list */

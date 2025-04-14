@@ -1,0 +1,134 @@
+/** Homebutton */
+.icon-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.icon-home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-home svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+svg {
+    width: 30px;
+}
+
+/** Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;n
+}
+
+.icon-home {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/** Main content */
+    
+main {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add some padding */
+    margin: 0 auto; /* Center the main content */
+    max-width: 800px; /* Optional: Limit the width for better readability */
+}
+
+/* Description */
+.description {
+    margin-bottom: 20px; /* Add spacing below the description if needed */
+}
+
+.line0 {
+    font-size: 1.5rem; /* Make it slightly larger */
+    font-weight: bold; /* Emphasize the text */
+    margin-bottom: 20px; /* Add spacing below line0 */
+}
+
+.line1, .line2, .line3 {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Add line spacing for readability */
+    margin-bottom: 15px; /* Add spacing between lines */
+}
+/** location table */
+.location h2{
+    font-size: 2rem;
+    text-align: center;;
+    text-decoration: underline;
+}
+
+    .table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    font-size: 1rem; 
+    text-align: left; 
+
+}
+
+.table th, .table td {
+    border: 1px solid #ddd; 
+    padding: 12px 15px; 
+}
+
+.table th {
+    background-color: lightgrey; 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9; 
+}
+
+.table tr:hover {
+    background-color: #f1f1f1; 
+}
+
+.table td a {
+    color: #007BFF; 
+    text-decoration: none; 
+}
+
+.table td a:hover {
+    text-decoration: underline; 
+}
+
+
+
+
+
+
+/** Footer */
+footer{
+    text-align: left;
+    background-color: #eee;
+    margin-top: 150px;
+    font-size: small;
+}
+
+
