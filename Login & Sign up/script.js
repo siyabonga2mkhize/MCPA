@@ -7,10 +7,20 @@ form.addEventListener('submit', e => {
   
   e.preventDefault()
   
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => response.text().then(text => alert(`Thank you! Form is submitted: ${text}`)))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
+  const formData = new FormData(form);
+
+  // Add new columns to the form data
+  formData.append('Surname', document.querySelector("input[name='Surname']").value);
+  formData.append('your-name', document.querySelector("input[name='your-name']").value);
+  formData.append('your-email', document.querySelector("input[name='your-email']").value);
+  formData.append('CellNumber', document.querySelector("input[name='CellNumber']").value);
+  formData.append('password', document.querySelector("input[name='password']").value);
+  formData.append('Address', document.querySelector("input[name='Address']").value);
+
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => response.text().then(text => alert(`Thank you! Form is submitted: ${text}`)))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
 })
 
 //read from publish link
