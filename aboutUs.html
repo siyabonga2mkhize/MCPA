@@ -17,7 +17,7 @@
     <select id="team-members" onchange="displayInfo()">
         <option value="default">-- Choose a team member --</option>
         <option value="member1">Thulani Thabethe</option>
-        <option value="member2">Jane Smith</option>
+        <option value="member2">Siyamthanda Dlamini</option>
     </select>
 
     <!-- Hidden section for picture and table -->
@@ -60,7 +60,7 @@
         infoSection.style.display = "block";
 
         if (selectedMember === "member1") {
-            pic.src = "C:/Users/thesm/Desktop/Demo/Images/member1.jpg"; // Replace***
+            pic.src = "https://i.postimg.cc/9fDhrW8D/thulani.jpg"; // Replace***
             detailsRow.innerHTML = `
                 <td>Thulani</td>
                 <td>Thabethe</td>
@@ -69,10 +69,10 @@
                 <td>.js Developer</td>
             `;
         } else if (selectedMember === "member2") {
-            pic.src = "C:/Users/thesm/Desktop/Demo/Images/member2.jpg"; // Replace***
+            pic.src = "https://i.postimg.cc/XNf0Z18k/siyamthanda.jpg"; // Replace***
             detailsRow.innerHTML = `
-                <td>Jane</td>
-                <td>Smith</td>
+                <td>Siyamthanda</td>
+                <td>Dlamini</td>
                 <td>87654321</td>
                 <td>MSc Marketing</td>
                 <td>Marketing Manager</td>
