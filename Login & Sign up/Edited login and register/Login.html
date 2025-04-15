@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box active" id="login-form">
+            <form action="" method="post">
+                <h2>Login</h2>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="password" name="Password" placeholder="Password" required>
+                <button type="submit" name="login">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('register-form')">Register</a></p>
+            </form>
+        </div>
+        <div class="form-box " id="register-form">
+            <form action="" method="post">
+                <h2>Register</h2>
+                <input type="text" name="Surname" placeholder="Surname" required>
+                <input type="text" name="Name" placeholder="Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <input type="number" name="Cell Number" placeholder="Cell Number" required>
+                <input type="password" name="Password" placeholder="Password" required>
+                <input type="text" name="Address" placeholder="Address" required>
+                <button type="submit" name="Register">Register</button>
+                <p>Already have an account? <a href="#" onclick="showForm('login-form')">Login</a></p>
+            </form>
+        </div>
+    </div>  
+
+    <script src="Login.js"></script>
+    
+</body>
+</html>
