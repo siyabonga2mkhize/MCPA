@@ -118,3 +118,10 @@ body{
     font-weight: 300;
     text-transform: initial;
 }
+
+footer{
+    text-align: left;
+    background-color: #eee;
+    margin-top: 150px;
+    font-size: small;
+}
