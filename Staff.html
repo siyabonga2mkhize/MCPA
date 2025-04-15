@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="video-bg">
-    <img class="imgLogo" src="C:/Users/thesm/Desktop/Demo/Images/DUT_log.jpg" alt="DUT Logo">
+    <img class="imgLogo" src="884ced4a882e791f459c37d171d32fac.png" alt="DUT Logo">
 </div>
 <div class="container">
     <h4>About Us</h4>
@@ -18,9 +18,17 @@
         <option value="default">-- Choose a team member --</option>
         <option value="member1">Thulani Thabethe</option>
         <option value="member2">Siyamthanda Dlamini</option>
+        <option value="member3">Siyabonga Mkhize</option>
+        <option value="member4">Ayanda Mthembu</option>
+        <option value="member5">Jack Dikoko</option>
+        <option value="member6">Isaac Toluwanimi Olatunji</option>
+        <option value="member7">Liyema Zama</option>
+        <option value="member8">Adam Mahomed</option>
+        <option value="member9">S.S Mwandla</option>
+        <option value="member9">Bongumusa Zuma</option>
     </select>
 
-    <!-- Hidden section for picture and table -->
+    <!-- This Hides and auto appears -->
     <div id="info-section" style="display: none;" class="grid_container">
         <img id="member-pic" src="" alt="Team Member Picture">
         <table>
@@ -51,7 +59,7 @@
         const pic = document.getElementById('member-pic');
         const detailsRow = document.getElementById('details-row');
 
-        // Show the info section only if a valid member is selected
+        // only shows when a member is selected
         if (selectedMember === "default") {
             infoSection.style.display = "none";
             return;
@@ -60,29 +68,97 @@
         infoSection.style.display = "block";
 
         if (selectedMember === "member1") {
-            pic.src = "https://i.postimg.cc/9fDhrW8D/thulani.jpg"; // Replace***
+            pic.src = "https://i.postimg.cc/506qj1wx/thulani.jpg"; // internet picture source validate
             detailsRow.innerHTML = `
                 <td>Thulani</td>
                 <td>Thabethe</td>
                 <td>21628190</td>
                 <td>ICT Diploma Applications Development</td>
-                <td>.js Developer</td>
+                <td>Web Developer</td>
             `;
         } else if (selectedMember === "member2") {
-            pic.src = "https://i.postimg.cc/XNf0Z18k/siyamthanda.jpg"; // Replace***
+            pic.src = "https://i.postimg.cc/Px9bwc41/siyamthanda.jpg"; 
             detailsRow.innerHTML = `
                 <td>Siyamthanda</td>
                 <td>Dlamini</td>
-                <td>87654321</td>
-                <td>MSc Marketing</td>
-                <td>Marketing Manager</td>
+                <td>22435296</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member3") {
+            pic.src = "https://i.postimg.cc/xds30qNx/siyabonga.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Siyabonga Mkhize</td>
+                <td>Mkhize</td>
+                <td>22430686</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+        } else if (selectedMember === "member4") {
+            pic.src = "https://i.postimg.cc/rwkJjBLJ/ayanda.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Ayanda</td>
+                <td>Mthembu</td>
+                <td>22406394</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member5") {
+            pic.src = "https://i.postimg.cc/DwPcMxvK/jack.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Kwazi</td>
+                <td>Dikoko</td>
+                <td>22494121</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member6") {
+            pic.src = "https://i.postimg.cc/4341kpyH/Whats-App-Image-2025-04-14-at-17-15-24-0099d2dd.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Isaac Toluwanimi </td>
+                <td>Olatunji</td>
+                <td>22461594</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member7") {
+            pic.src = "https://i.postimg.cc/Y0F6f3nZ/zama.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Liyema</td>
+                <td>Zama</td>
+                <td>22452585</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+             } else if (selectedMember === "member8") {
+            pic.src = "https://i.postimg.cc/Y0F6f3nZ/zama.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Adam</td>
+                <td>Mahomed</td>
+                <td>22379592</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member9") {
+            pic.src = "https://i.postimg.cc/Hs5zQpFn/Mwandla.jpg"; 
+            detailsRow.innerHTML = `
+                <td>S.S</td>
+                <td>Mwandla</td>
+                <td>22494245</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
+            `;
+            } else if (selectedMember === "member10") {
+            pic.src = "https://i.postimg.cc/sfG4rjjm/Zuma.jpg"; 
+            detailsRow.innerHTML = `
+                <td>Bongumusa</td>
+                <td>Zuma</td>
+                <td>22201607</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>Web Developer</td>
             `;
         }
     }
 </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> ac3c6197e9b4800db7481a8e1a3694f46c9d946d
