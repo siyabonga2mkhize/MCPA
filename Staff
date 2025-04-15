@@ -1,1 +1,85 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Company</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+<div class="video-bg">
+    <img class="imgLogo" src="C:/Users/thesm/Desktop/Demo/Images/DUT_log.jpg" alt="DUT Logo">
+</div>
+<div class="container">
+    <h4>About Us</h4>
+    <hr>
+    <label for="team-members">Select a team member:</label>
+    <select id="team-members" onchange="displayInfo()">
+        <option value="default">-- Choose a team member --</option>
+        <option value="member1">Thulani Thabethe</option>
+        <option value="member2">Siyamthanda Dlamini</option>
+    </select>
+
+    <!-- Hidden section for picture and table -->
+    <div id="info-section" style="display: none;" class="grid_container">
+        <img id="member-pic" src="" alt="Team Member Picture">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Student Number</th>
+                <th>Qualification</th>
+                <th>Role</th>
+            </tr>
+            <tr id="details-row">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    function displayInfo() {
+        const memberSelect = document.getElementById('team-members');
+        const selectedMember = memberSelect.value;
+
+        const infoSection = document.getElementById('info-section');
+        const pic = document.getElementById('member-pic');
+        const detailsRow = document.getElementById('details-row');
+
+        // Show the info section only if a valid member is selected
+        if (selectedMember === "default") {
+            infoSection.style.display = "none";
+            return;
+        }
+
+        infoSection.style.display = "block";
+
+        if (selectedMember === "member1") {
+            pic.src = "https://i.postimg.cc/9fDhrW8D/thulani.jpg"; // Replace***
+            detailsRow.innerHTML = `
+                <td>Thulani</td>
+                <td>Thabethe</td>
+                <td>21628190</td>
+                <td>ICT Diploma Applications Development</td>
+                <td>.js Developer</td>
+            `;
+        } else if (selectedMember === "member2") {
+            pic.src = "https://i.postimg.cc/XNf0Z18k/siyamthanda.jpg"; // Replace***
+            detailsRow.innerHTML = `
+                <td>Siyamthanda</td>
+                <td>Dlamini</td>
+                <td>87654321</td>
+                <td>MSc Marketing</td>
+                <td>Marketing Manager</td>
+            `;
+        }
+    }
+</script>
+</body>
+</html>
