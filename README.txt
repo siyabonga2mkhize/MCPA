@@ -1,5 +1,7 @@
-when starting to open, start by opeing the "Home Page first"
+To start, open the "index.html" file first.
 
+NOTE!!! 
+run on live server 
 
 deployment page
 open link 
