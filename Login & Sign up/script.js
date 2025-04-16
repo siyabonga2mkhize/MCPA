@@ -74,3 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Login button not found in the DOM.");
     }
 });
+
+
+//logged in user 
+localStorage.setItem("isLoggedIn", "true");
+localStorage.setItem("userEmail", email);
