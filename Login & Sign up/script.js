@@ -77,5 +77,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //logged in user 
-localStorage.setItem("isLoggedIn", "true");
+localStorage.setItem("isLoggedIn", "false");
 localStorage.setItem("userEmail", email);
