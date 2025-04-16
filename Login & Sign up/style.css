@@ -106,3 +106,28 @@ footer {
 }
 
 
+/** icon home*/
+header {
+    position: absolute; /* Or fixed, depending on your needs */
+    top: 0;
+    left: 0;
+    padding: 0; /* Remove padding */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.icon-home {
+    display: flex;
+    align-items: center;
+}
+
+.icon-home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-home svg {
+    width: 30px; /* Adjusted size */
+    height: 30px;
+    cursor: pointer;
+}
